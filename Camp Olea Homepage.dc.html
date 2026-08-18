@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Karla:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#FBF7F0; }
+  * { box-sizing: border-box; }
+  a { color:inherit; text-decoration:none; }
+  a:focus-visible { outline:2px solid #B25A31; outline-offset:3px; }
+  a:hover { color:#B25A31; }
+  input::placeholder, textarea::placeholder { color:#B0A48F; opacity:1; }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:1440px; margin:0 auto; background:#FBF7F0; font-family:'Karla',sans-serif; color:#2E2A24; overflow-x:clip; background-image:radial-gradient(circle at 20% 30%, rgba(74,55,40,.07) 0 1px, rgba(74,55,40,0) 1.5px), radial-gradient(circle at 72% 62%, rgba(74,55,40,.055) 0 1px, rgba(74,55,40,0) 1.5px), radial-gradient(circle at 45% 88%, rgba(74,55,40,.045) 0 1px, rgba(74,55,40,0) 1.5px), radial-gradient(circle at 18% 12%, rgba(178,90,49,.055), rgba(178,90,49,0) 42%); background-size:13px 13px, 19px 19px, 29px 29px, 100% 900px; background-repeat:repeat, repeat, repeat, no-repeat;">
+
+  <div data-nav="" style="position:fixed; top:0; left:0; right:0; z-index:60; background:rgba(24,19,14,.34); backdrop-filter:blur(8px); border-bottom:1px solid rgba(251,247,240,.14); transition:background .45s ease, border-color .45s ease, padding .45s ease;">
+    <div style="max-width:1440px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:14px 44px;">
+      <img data-nav-logo="" src="assets/logo-light.png" alt="Camp Olea" style="height:54px; width:auto; display:block; flex-shrink:0; margin-right:32px; transition:opacity .35s ease;">
+      <div style="display:flex; align-items:center; gap:26px;">
+        <div data-nav-links="" style="display:flex; gap:28px; font-weight:500; font-size:11px; letter-spacing:.14em; color:rgba(251,247,240,.88); transition:color .45s ease;">
+          <a href="Camp%20Olea%20The%20House.dc.html">THE HOUSE</a><a href="#reserve">THE RESERVE</a><a href="#conservation">CONSERVATION</a>
+        </div>
+        <a href="Camp%20Olea%20Rates%20&amp;%20Enquiries.dc.html" style="background:#B25A31; color:#FBF7F0; font-weight:600; font-size:11px; letter-spacing:.16em; padding:13px 24px;">RATES &amp; ENQUIRIES</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-px-scene="" data-px-hero="" style="position:relative; height:100vh; min-height:560px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#241F1A;">
+    <div data-px="0.4" style="position:absolute; left:0; right:0; top:-12%; height:130%; background-image:url('assets/sundowners-waterhole.png'); background-size:cover; background-position:center 42%; will-change:transform;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom,rgba(24,18,12,.52) 0%,rgba(24,18,12,.34) 30%,rgba(24,18,12,.3) 44%,rgba(24,18,12,0) 56%);"></div>
+    <div data-px="0.16" data-px-fade="" style="position:relative; text-align:center; padding:0 56px; margin-bottom:17vh; will-change:transform, opacity;">
+      <div style="font-weight:600; font-size:15px; letter-spacing:.42em; color:#FFF6E7; text-shadow:0 2px 18px rgba(24,18,12,.6); margin-bottom:22px;">EXCLUSIVE-USE SAFARI HOUSE</div>
+      <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:clamp(60px,12.2vw,176px); line-height:.86; letter-spacing:.05em; color:#FDFAF3; text-shadow:0 3px 26px rgba(24,18,12,.42); white-space:nowrap;">CAMP OLEA</div>
+    </div>
+    <div data-px="0.4" style="position:absolute; left:0; right:0; top:-12%; height:130%; background-image:url('assets/sundowners-waterhole.png'); background-size:cover; background-position:center 42%; -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0 46.5%,rgba(0,0,0,.42) 48.6%,rgba(0,0,0,1) 51.8%); mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0 46.5%,rgba(0,0,0,.42) 48.6%,rgba(0,0,0,1) 51.8%); will-change:transform;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom,rgba(24,18,12,0) 50%,rgba(24,18,12,.5) 78%,rgba(24,18,12,.82) 100%);"></div>
+    <div data-px="0.08" data-px-fade="" style="position:absolute; bottom:40px; left:0; right:0; padding:0 48px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:36px; will-change:transform, opacity;">
+      <div style="font-size:14px; line-height:1.6; color:#E9DCC9; max-width:290px;">Come for the weekend and let go of the details.</div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:22px;">
+        <a href="#intro" style="border:1px solid rgba(251,247,240,.62); background:rgba(24,19,14,.24); color:#FDFAF3; font-weight:600; font-size:12px; letter-spacing:.18em; padding:17px 44px;">EXPLORE THE CAMP</a>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div style="font-weight:600; font-size:10px; letter-spacing:.22em; color:rgba(251,247,240,.66);">SCROLL</div>
+          <div style="width:1px; height:34px; background:linear-gradient(to bottom,rgba(251,247,240,.66),rgba(251,247,240,0));"></div>
+        </div>
+      </div>
+      <div style="font-weight:600; font-size:11px; letter-spacing:.2em; color:rgba(251,247,240,.72); text-align:right;">MALARIA FREE · 2H FROM JOHANNESBURG</div>
+    </div>
+  </div>
+
+  <div id="intro" data-reveal="" style="padding:104px 56px 76px; text-align:center; max-width:820px; margin:0 auto;">
+    <div style="font-weight:600; font-size:11px; letter-spacing:.22em; color:#B25A31; margin-bottom:22px;">EXCLUSIVE USE</div>
+    <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:56px; line-height:1.08; margin:0; text-wrap:pretty;">A whole safari house, and only your party in it</h2>
+    <p style="font-size:17px; line-height:1.85; color:#5A5347; margin:28px 0 0;">A five-bedroom safari house on 17,000 hectares of Big Five bushveld, taken by one party at a time. Meals, drives and every drink are included. Two hours from Johannesburg.</p>
+    <p style="font-size:17px; line-height:1.85; color:#5A5347; margin:18px 0 0;">Children under 18 stay at half rate, which makes taking the whole house easy on a family.</p>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+    <a href="Camp%20Olea%20The%20House.dc.html" data-px-scene="" style="position:relative; height:420px; overflow:hidden; display:block;">
+      <div data-px="0.12" style="position:absolute; left:0; right:0; top:-10%; height:125%; background-image:url('assets/zebra-road.png'); background-size:cover; background-position:center 60%; will-change:transform;"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(to bottom,rgba(24,18,12,.34) 0%,rgba(24,18,12,.5) 100%);"></div>
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;">
+        <div style="font-weight:500; font-size:20px; letter-spacing:.16em; color:#FDFAF3;">GAME DRIVES</div>
+        <div style="width:48px; height:48px; border-radius:50%; border:1px solid rgba(251,247,240,.75); display:flex; align-items:center; justify-content:center; color:#FDFAF3; font-size:16px;">→</div>
+      </div>
+    </a>
+    <a href="Camp%20Olea%20The%20House.dc.html" data-px-scene="" style="position:relative; height:420px; overflow:hidden; display:block;">
+      <div data-px="0.12" style="position:absolute; left:0; right:0; top:-10%; height:125%; background-image:url('assets/patio-lounge-day.png'); background-size:cover; background-position:center; will-change:transform;"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(to bottom,rgba(24,18,12,.34) 0%,rgba(24,18,12,.5) 100%);"></div>
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;">
+        <div style="font-weight:500; font-size:20px; letter-spacing:.16em; color:#FDFAF3;">LIVING SPACES</div>
+        <div style="width:48px; height:48px; border-radius:50%; border:1px solid rgba(251,247,240,.75); display:flex; align-items:center; justify-content:center; color:#FDFAF3; font-size:16px;">→</div>
+      </div>
+    </a>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); border-bottom:1px solid #EAE0CF; text-align:center;">
+    <div style="padding:34px 30px; border-right:1px solid #EAE0CF;"><div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:30px;">17 000</div><div style="font-weight:600; font-size:10px; letter-spacing:.18em; color:#8A7A62; margin-top:8px;">HECTARES</div></div>
+    <div style="padding:34px 30px; border-right:1px solid #EAE0CF;"><div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:30px;">Big Five</div><div style="font-weight:600; font-size:10px; letter-spacing:.18em; color:#8A7A62; margin-top:8px;">ALL RESIDENT</div></div>
+    <div style="padding:34px 30px; border-right:1px solid #EAE0CF;"><div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:30px;">5 rooms</div><div style="font-weight:600; font-size:10px; letter-spacing:.18em; color:#8A7A62; margin-top:8px;">ALL EN-SUITE, ONE PARTY</div></div>
+    <div style="padding:34px 30px;"><div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:30px;">2 hours</div><div style="font-weight:600; font-size:10px; letter-spacing:.18em; color:#8A7A62; margin-top:8px;">FROM JOHANNESBURG</div></div>
+  </div>
+
+  <div style="padding:96px 56px;">
+    <div data-reveal="" style="max-width:780px; margin:0 auto; text-align:center;">
+      <div style="font-weight:600; font-size:11px; letter-spacing:.22em; color:#B25A31; margin-bottom:20px;">ALL INCLUSIVE</div>
+      <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:48px; line-height:1.1; margin:0;">One rate. Nothing else to settle.</h2>
+      <p style="font-size:17px; line-height:1.85; color:#5A5347; margin:24px 0 0;">No bar tab, no drive supplement, no menu prices. The only conversation about money happens before you arrive — after that the bar is open, the kitchen is yours, and the vehicle leaves when you're ready.</p>
+    </div>
+    <div style="max-width:1060px; margin:52px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:0 56px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Three meals a day, plus all-day snacks</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Soft drinks, water, local beer, wine &amp; spirits</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Two game drives a day</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Swimming pool, gym &amp; sauna</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Guided bush walks with a tracker</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; border-bottom:1px solid #EAE0CF; font-size:16px; color:#3E382E;"><span>Boma dinners &amp; night drives</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">included</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; font-size:16px; color:#3E382E;"><span>Exclusive use — no other guests, ever</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">always</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:19px 0; font-size:16px; color:#3E382E;"><span>Children under 18 at half rate</span><span style="color:#B25A31; font-size:13px; letter-spacing:.08em; flex-shrink:0;">always</span></div>
+    </div>
+    <div style="display:flex; justify-content:center; margin-top:46px;">
+      <a href="Camp%20Olea%20Rates%20&amp;%20Enquiries.dc.html" style="border:1px solid #C9B79C; color:#5A5347; font-weight:500; font-size:12px; letter-spacing:.18em; padding:18px 42px;">RATES &amp; ENQUIRIES</a>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:20px; padding:0 56px 96px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; flex:1 1 620px; min-width:0;">
+    <div data-reveal="" style="background:#FFFFFF; border:1px solid #E4D9C6; padding:10px 10px 0; box-shadow:0 1px 0 rgba(74,55,40,.04); display:block; color:inherit;">
+      <div style="height:230px; border-radius:112px 112px 2px 2px; background-image:url('assets/firepit-stone.png'); background-size:cover; background-position:center 60%;"></div>
+      <div style="padding:22px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+        <div style="font-size:13px; letter-spacing:.1em; color:#5A5347; line-height:1.5;">BOMA &amp; BRAAI</div>
+        <div style="width:38px; height:38px; border-radius:50%; border:1px solid #D5C4A8; display:flex; align-items:center; justify-content:center; color:#B25A31; font-size:14px; flex-shrink:0;">→</div>
+      </div>
+    </div>
+    <div data-reveal="" style="background:#FFFFFF; border:1px solid #E4D9C6; padding:10px 10px 0; box-shadow:0 1px 0 rgba(74,55,40,.04); display:block; color:inherit;">
+      <div style="height:230px; border-radius:112px 112px 2px 2px; background-image:url('assets/rhino-road.png'); background-size:cover; background-position:center;"></div>
+      <div style="padding:22px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+        <div style="font-size:13px; letter-spacing:.1em; color:#5A5347; line-height:1.5;">WILDLIFE</div>
+        <div style="width:38px; height:38px; border-radius:50%; border:1px solid #D5C4A8; display:flex; align-items:center; justify-content:center; color:#B25A31; font-size:14px; flex-shrink:0;">→</div>
+      </div>
+    </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; flex:1 1 620px; min-width:0;">
+    <div data-reveal="" style="background:#FFFFFF; border:1px solid #E4D9C6; padding:10px 10px 0; box-shadow:0 1px 0 rgba(74,55,40,.04); display:block; color:inherit;">
+      <div style="height:230px; border-radius:112px 112px 2px 2px; background-image:url('assets/pool-reflection-sunset.png'); background-size:cover; background-position:center;"></div>
+      <div style="padding:22px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+        <div style="font-size:13px; letter-spacing:.1em; color:#5A5347; line-height:1.5;">POOL AT SUNSET</div>
+        <div style="width:38px; height:38px; border-radius:50%; border:1px solid #D5C4A8; display:flex; align-items:center; justify-content:center; color:#B25A31; font-size:14px; flex-shrink:0;">→</div>
+      </div>
+    </div>
+    <div data-reveal="" style="background:#FFFFFF; border:1px solid #E4D9C6; padding:10px 10px 0; box-shadow:0 1px 0 rgba(74,55,40,.04); display:block; color:inherit;">
+      <div style="height:230px; border-radius:112px 112px 2px 2px; background-image:url('assets/bush-view-doors.png'); background-size:cover; background-position:center;"></div>
+      <div style="padding:22px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+        <div style="font-size:13px; letter-spacing:.1em; color:#5A5347; line-height:1.5;">THE VIEW FROM THE LOUNGE</div>
+        <div style="width:38px; height:38px; border-radius:50%; border:1px solid #D5C4A8; display:flex; align-items:center; justify-content:center; color:#B25A31; font-size:14px; flex-shrink:0;">→</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div data-px-scene="" style="position:relative; height:660px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+    <div data-px="0.16" style="position:absolute; left:0; right:0; top:-12%; height:130%; background-image:url('assets/firepit-dusk.png'); background-size:cover; background-position:center 62%; will-change:transform;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom,rgba(20,16,12,.62) 0%,rgba(20,16,12,.42) 45%,rgba(20,16,12,.72) 100%);"></div>
+    <div data-px="0.06" style="position:relative; text-align:center; max-width:720px; padding:0 56px;">
+      <div style="font-weight:600; font-size:11px; letter-spacing:.24em; color:#E2A672; margin-bottom:22px;">AFTER DARK</div>
+      <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:50px; line-height:1.12; color:#FDFAF3; text-wrap:pretty;">Fire, a long table, and a sky with nothing in the way of it</div>
+      <p style="font-size:17px; line-height:1.8; color:#E4D8C8; margin:24px 0 0;">Dinner in the boma most nights, a spotlit night drive after if you want one, and zero light pollution for fifty kilometres in any direction.</p>
+      <div style="display:flex; justify-content:center; margin-top:38px;">
+        <a href="Camp%20Olea%20Rates%20&amp;%20Enquiries.dc.html" style="border:1px solid rgba(251,247,240,.55); color:#FDFAF3; font-weight:500; font-size:12px; letter-spacing:.18em; padding:18px 42px;">RATES &amp; ENQUIRIES</a>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}">
+  <div style="background-color:#EFE9DC; background-image:radial-gradient(circle at 20% 30%, rgba(74,55,40,.07) 0 1px, rgba(74,55,40,0) 1.5px), radial-gradient(circle at 72% 62%, rgba(74,55,40,.055) 0 1px, rgba(74,55,40,0) 1.5px), radial-gradient(circle at 45% 88%, rgba(74,55,40,.045) 0 1px, rgba(74,55,40,0) 1.5px); background-size:13px 13px, 19px 19px, 29px 29px; background-repeat:repeat, repeat, repeat; padding:96px 56px; text-align:center;">
+    <h2 data-reveal="" style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:48px; margin:0 0 12px; color:#2E2A24;">Your days, roughly</h2>
+    <p style="font-size:17px; color:#6E6350; margin:0 0 56px;">Nothing here is compulsory. This is only what tends to happen.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:24px; text-align:left;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; flex:1 1 600px; min-width:0;">
+      <div data-reveal="" style="background:#FBF7F0; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#B25A31; letter-spacing:.1em;">05:30</div>
+        <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:25px; margin:14px 0 10px;">Coffee, then out</div>
+        <div style="font-size:15px; line-height:1.7; color:#5A5347;">Rusks at the fire and into the vehicle while the air is still cold.</div>
+      </div>
+      <div data-reveal="" style="background:#FBF7F0; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#B25A31; letter-spacing:.1em;">11:00</div>
+        <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:25px; margin:14px 0 10px;">Water and shade</div>
+        <div style="font-size:15px; line-height:1.7; color:#5A5347;">Brunch, then the pool, the sauna, or a very long nap on the deck.</div>
+      </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; flex:1 1 600px; min-width:0;">
+      <div data-reveal="" style="background:#FBF7F0; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#B25A31; letter-spacing:.1em;">16:00</div>
+        <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:25px; margin:14px 0 10px;">The second drive</div>
+        <div style="font-size:15px; line-height:1.7; color:#5A5347;">Sundowners somewhere with a view, and home in the dark.</div>
+      </div>
+      <div data-reveal="" style="background:#FBF7F0; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#B25A31; letter-spacing:.1em;">19:30</div>
+        <div style="font-family:'Marcellus',serif; letter-spacing:.03em; color:#4A3728; font-size:25px; margin:14px 0 10px;">Fire and stars</div>
+        <div style="font-size:15px; line-height:1.7; color:#5A5347;">Dinner in the boma, and the bush making its own noise around it.</div>
+      </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="padding:96px 56px;">
+    <div data-reveal="" style="max-width:760px; margin:0 auto; text-align:center;">
+      <div style="font-weight:600; font-size:11px; letter-spacing:.22em; color:#B25A31; margin-bottom:20px;">THE HOUSE</div>
+      <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:46px; line-height:1.1; margin:0; text-wrap:pretty;">Five bedrooms, and no-one else in any of them</h2>
+      <p style="font-size:17px; line-height:1.85; color:#5A5347; margin:24px 0 0;">All en-suite, all opening to the bush. Because the lodge goes to one party at a time, the pool, the deck, the boma, the gym and the sauna are simply yours for the length of your stay.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; height:520px; margin-top:52px;">
+      <div style="background-image:url('assets/bathroom-suite.png'); background-size:cover; background-position:60% center;"></div>
+      <div style="display:grid; grid-template-rows:1fr 1fr; gap:12px;">
+        <div style="background-image:url('assets/suite-bedroom-doors.png'); background-size:cover; background-position:center 55%;"></div>
+        <div style="background-image:url('assets/suite-veranda.png'); background-size:cover; background-position:center 60%;"></div>
+      </div>
+      <div style="background-image:url('assets/living-open-plan.png'); background-size:cover; background-position:center;"></div>
+    </div>
+    <div style="display:flex; justify-content:center; margin-top:46px;">
+      <a href="Camp%20Olea%20The%20House.dc.html" style="border:1px solid #C9B79C; color:#5A5347; font-weight:500; font-size:12px; letter-spacing:.18em; padding:18px 42px;">SEE THE ROOMS</a>
+    </div>
+  </div>
+
+  <div id="reserve" style="display:grid; grid-template-columns:1fr 1fr; background:#2E2A24;">
+    <div style="padding:96px 56px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-weight:600; font-size:11px; letter-spacing:.22em; color:#E2924F; margin-bottom:18px;">THE RESERVE</div>
+      <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:46px; line-height:1.1; margin:0; color:#FDFAF3;">RoiSan, unfenced and unhurried</h2>
+      <p style="font-size:17px; line-height:1.8; color:#B9AC94; margin:20px 0 0;">Elephant, rhino, lion, leopard and buffalo all walk here, across 17,000 hectares of pristine bushveld. Malaria free, good weather the year round, and rarely another vehicle in sight.</p>
+      <div style="font-weight:500; font-size:12px; letter-spacing:.14em; color:#9A8C74; line-height:2.2; border-top:1px solid #464036; padding-top:20px; margin-top:28px;">2H00 FROM JOHANNESBURG<br>1H40 FROM PRETORIA<br>25 MIN FROM BELA-BELA</div>
+    </div>
+    <div data-px-scene="" style="position:relative; min-height:560px; overflow:hidden;">
+      <div data-px="0.1" style="position:absolute; left:0; right:0; top:-10%; height:125%; background-image:url('assets/patio-sunset.png'); background-size:cover; background-position:center 55%; will-change:transform;"></div>
+    </div>
+  </div>
+
+  <sc-if value="{{ showConservation }}" hint-placeholder-val="{{ true }}">
+  <div id="conservation" style="padding:96px 56px; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center;">
+    <div data-px-scene="" style="position:relative; height:440px; overflow:hidden;">
+      <div data-px="0.1" style="position:absolute; left:0; right:0; top:-10%; height:125%; background-image:url('assets/rhinos-bush.png'); background-size:cover; background-position:center; will-change:transform;"></div>
+    </div>
+    <div data-reveal="">
+      <div style="font-weight:600; font-size:11px; letter-spacing:.22em; color:#B25A31; margin-bottom:18px;">CONSERVATION</div>
+      <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:44px; line-height:1.12; margin:0; text-wrap:pretty;">The reserve is the reason, and it needs paying for</h2>
+      <p style="font-size:17px; line-height:1.8; color:#5A5347; margin:18px 0 0;">RoiSan keeps a full-time anti-poaching and monitoring team in the field across all 17,000 hectares. A portion of every night at Camp Olea goes straight to them — rangers, vehicles, and habitat work.</p>
+      <a href="#conservation" style="border:1px solid #C9B79C; color:#5A5347; font-weight:500; font-size:12px; letter-spacing:.18em; padding:16px 36px; display:inline-block; margin-top:30px;">READ MORE</a>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="background:#2E2A24; padding:96px 56px;">
+    <div style="max-width:1060px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px;">
+      <div>
+        <img src="assets/logo-light.png" alt="" style="height:96px; width:auto; display:block; opacity:.85; margin-bottom:26px;">
+        <h2 style="font-family:'Marcellus',serif; font-weight:400; letter-spacing:.035em; color:#40301F; font-size:46px; line-height:1.08; margin:0; color:#FDFAF3;">Ask us about your dates</h2>
+        <p style="font-size:17px; line-height:1.75; color:#B9AC94; margin:18px 0 0;">One party at a time means a short calendar. Tell us roughly when you'd like to come and we'll reply personally with what's open and a full quote.</p>
+        <div style="font-weight:500; font-size:13px; letter-spacing:.1em; color:#9A8C74; line-height:2.2; margin-top:32px; border-top:1px solid #464036; padding-top:20px;">stay@campolea.co.za<br>WhatsApp +27 00 000 0000<br>RoiSan Nature Reserve, Bela-Bela, Limpopo</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <input placeholder="Name" style="background:#3A342C; border:none; outline:none; padding:17px; font-size:14px; color:#FDFAF3;">
+          <input placeholder="Email" style="background:#3A342C; border:none; outline:none; padding:17px; font-size:14px; color:#FDFAF3;">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <input placeholder="Preferred dates" style="background:#3A342C; border:none; outline:none; padding:17px; font-size:14px; color:#FDFAF3;">
+          <input placeholder="Adults / children" style="background:#3A342C; border:none; outline:none; padding:17px; font-size:14px; color:#FDFAF3;">
+        </div>
+        <textarea placeholder="Anything we should know" rows="4" style="background:#3A342C; border:none; outline:none; padding:17px; font-size:14px; color:#FDFAF3; resize:vertical;"></textarea>
+        <button style="background:#B25A31; color:#FBF7F0; border:none; font-weight:600; font-size:12px; letter-spacing:.16em; padding:18px; margin-top:6px; cursor:pointer;" style-hover="background:#9B4B26">SEND ENQUIRY</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#241F1A; padding:48px 56px; display:flex; align-items:center; justify-content:space-between; gap:40px; border-bottom:1px solid #332C25;">
+    <img src="assets/logo-light.png" alt="Camp Olea" style="height:74px; width:auto; display:block; opacity:.9;">
+    <div style="display:flex; gap:10px; align-items:center;">
+      <input placeholder="Sign up for our newsletter" style="background:#332C25; border:none; outline:none; padding:15px 18px; font-size:13px; color:#FDFAF3; width:320px;">
+      <div style="background:#B25A31; color:#FBF7F0; font-weight:600; font-size:11px; letter-spacing:.16em; padding:16px 26px;">SIGN UP</div>
+    </div>
+  </div>
+
+  <div style="background:#241F1A; padding:34px 56px 44px; display:flex; align-items:center; justify-content:space-between; gap:40px;">
+    <div style="display:flex; gap:26px; font-weight:500; font-size:11px; letter-spacing:.14em; color:#8A7C66;">
+      <a href="Camp%20Olea%20The%20House.dc.html">THE HOUSE</a><a href="#reserve">THE RESERVE</a><a href="#conservation">CONSERVATION</a><a href="Camp%20Olea%20Rates%20&amp;%20Enquiries.dc.html">RATES &amp; ENQUIRIES</a>
+    </div>
+    <div style="font-size:11px; letter-spacing:.12em; color:#6E6350;">campolea.co.za · RoiSan Nature Reserve, Limpopo, South Africa</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTimeline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showConservation&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const tick = () => {
+      this.raf = 0;
+      const vh = window.innerHeight || 800;
+      const lite = window.innerWidth < 768;
+
+      const nav = document.querySelector('[data-nav]');
+      if (nav) {
+        const solid = window.scrollY > vh * 0.86;
+        nav.style.background = solid ? '#F4EEE3' : 'rgba(24,19,14,.34)';
+        nav.style.borderBottomColor = solid ? '#E4D9C6' : 'rgba(251,247,240,.14)';
+        const logo = nav.querySelector('[data-nav-logo]');
+        if (logo) logo.src = solid ? 'assets/logo.png' : 'assets/logo-light.png';
+        const links = nav.querySelector('[data-nav-links]');
+        if (links) links.style.color = solid ? '#6E6350' : 'rgba(251,247,240,.88)';
+      }
+
+      if (lite) {
+        this.layers.forEach(el => {
+          el.style.transform = 'none';
+          if (el.hasAttribute('data-px-fade')) el.style.opacity = '1';
+        });
+        return;
+      }
+
+      this.layers.forEach(el => {
+        const scene = el.closest('[data-px-scene]');
+        if (!scene) return;
+        const r = scene.getBoundingClientRect();
+        const sp = parseFloat(el.getAttribute('data-px')) || 0;
+        if (scene.hasAttribute('data-px-hero')) {
+          const o = Math.max(0, -r.top);
+          el.style.transform = 'translate3d(0,' + (o * sp).toFixed(1) + 'px,0)';
+          if (el.hasAttribute('data-px-fade')) el.style.opacity = String(Math.max(0, 1 - o / (r.height * 0.72)));
+        } else {
+          const p = (vh / 2 - (r.top + r.height / 2)) / vh;
+          el.style.transform = 'translate3d(0,' + (p * sp * 100).toFixed(1) + 'px,0)';
+        }
+      });
+    };
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(tick); };
+
+    const root = this.rootEl || document;
+    this.layers = Array.from(document.querySelectorAll('[data-px]'));
+    window.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this.onScroll);
+    tick();
+
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    reveals.forEach(el => {
+      el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)';
+      el.style.opacity = '0';
+      el.style.transform = 'translate3d(0,28px,0)';
+    });
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          this.io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(el => this.io.observe(el));
+    void root;
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, { capture: true });
+    window.removeEventListener('resize', this.onScroll);
+    if (this.io) this.io.disconnect();
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  renderVals() {
+    return {
+      showTimeline: this.props.showTimeline ?? true,
+      showConservation: this.props.showConservation ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
